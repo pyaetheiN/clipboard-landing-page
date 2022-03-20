@@ -375,7 +375,7 @@ body {
   color: #26baa4;
   font-weight: 600;
   display: inline-block;
-  margin: 0.5em;
+  margin: 0.5em 0;
 }
 
 .footer__link:hover {

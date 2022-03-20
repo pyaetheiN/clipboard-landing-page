@@ -1,0 +1,317 @@
+@import "_config.scss";
+@import "_utilities.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 18px;
+    color: $grayishblue;
+    font-weight: 400;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+@media screen and (max-width: 468px){
+    body{
+        font-size: 16px;
+    }
+}
+// header
+.header{
+    background-image: url("../images/bg-header-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 6em 0;
+
+    &__content{
+        text-align: center;
+    }
+    &__logo{
+        width: 100px;
+        margin-bottom: 1.5rem;
+    }
+    &__title{
+        font-size: 2.125em;
+        margin-bottom: 0.5em;
+    }
+    &__desc{
+        font-size: 1em;
+        width: 60%;
+    }
+}
+// header desc
+@media screen and (max-width: 468px){
+    .header{
+        background: url("../images/bg-header-mobile.png");
+        background-position: center;
+        background-size: cover;
+        
+        &__desc{
+        width: 90%;
+        }
+    }
+}
+// snippets
+.snippets{
+    padding-top: 4em;
+
+    &__content{
+        text-align: center;
+    }
+    // snippets tools
+    &__tools{
+        padding-top: 3em;
+
+        &__content{
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3rem;
+        }
+        &__img{
+            max-width: 630px;
+            margin-left: -30px;
+        }
+        &__data{
+            flex-direction: column;
+            row-gap: 3rem;
+            padding-top: 4em;
+        }
+    }
+    &__desc{
+        width: 45%;
+    }
+}
+@media screen and (max-width: 468px){
+    .snippets{
+        .section__desc{
+            width: 80%;
+        }
+    }
+}
+// four media queries for snippets tools //
+
+// desktops
+@media screen and (min-width: 1280px){
+    .snippets{
+
+        &__tools{
+
+            &__img{
+                max-width: 750px;
+            }
+        }
+    }
+}
+// screens between tablets and laptops
+@media screen and (max-width: 1180px){
+    .snippets{
+
+        &__tools{
+
+            &__content{
+                gap: 1em;
+            }
+            &__data{
+                padding-top: 1.5em;
+            }
+            &__img{
+                max-width: 550px;
+            }
+        }
+        &__desc{
+            width: 70%;
+        }
+    }
+}
+// tablets
+@media screen and (max-width: 968px){
+    .snippets{
+
+        &__tools{
+
+            &__content{
+                grid-template-columns: 1fr;
+            }
+            &__img{
+                max-width: 450px;
+                margin: 0 auto;
+            }
+            &__data{
+                text-align: center;
+            }
+        }
+        &__desc{
+            margin: 0 auto;
+        }
+    }
+}
+// screens between tablets and phone
+@media screen and (max-width: 768px){
+    .snippets{
+
+        &__tools{
+
+            &__img{
+                max-width: 360px;
+                padding: 0 1.5em;
+            }
+        }
+    }
+}
+// ================================= //
+
+// access
+.access{
+    padding-top: 6em;
+
+    &__img{
+        max-width: 720px;
+        margin: 0 auto;
+        padding-top: 4em;
+    }
+}
+// screen between tablets and laptops
+@media screen and (max-width: 1180px){
+    .access{
+
+        &__img{
+            max-width: 600px;
+        }
+    }
+}
+// access section desc
+@media screen and (max-width: 468px){
+    .access{
+        .section__desc{
+            width: 80%;
+        }
+    }
+}
+// supercharge
+.supercharge{
+    padding-top: 2em;
+
+    &__data{
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 3em 0;
+    }
+    &__img{
+        width: 40px;
+        margin-bottom: 2rem;
+    }
+    // i did it yessss :)
+    &__info:nth-child(3) &__img{
+        margin-bottom: 2.5rem;
+    }
+    &__desc{
+        width: 85%;
+    }
+}
+@media screen and (max-width: 768px){
+    .supercharge{
+
+        &__data{
+            grid-template-columns: 1fr;
+            gap: 3em;
+        }
+    }
+}
+// partnership
+.partnership{
+    padding: 4em 0;
+
+    &__content{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        gap: 3em;
+    }
+    &__logo{
+        width: 150px;
+    }
+}
+@media screen and (max-width: 768px){
+    .partnership{
+
+        &__content{
+            grid-template-columns: 1fr;
+            place-items: center;
+            row-gap: 3em;
+        }
+        &__logo{
+            width: 120px;
+        }
+    }
+}
+// download
+.download{
+    padding: 4em 0 5em;
+}
+// download section desc
+@media screen and (max-width: 468px){
+    .download{
+        .section__desc{
+            width: 80%;
+        }
+    }
+}
+// footer
+.footer{
+    background-color: $footerbg;
+    font-size: 0.8125em;
+
+    &__logo{
+        width: 60px;
+    }
+    &__content{
+        padding: 2em 0;
+        grid-template-columns: 0.6fr 1.4fr 1fr;
+        text-align: initial; // default = center ( grid items )
+        align-items: center;
+    }
+    &__links{
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: flex-start;
+        column-gap: 1em;
+    }
+    &__link{
+        color: $strongcyan;
+        font-weight: 600;
+        // inline block for adding margin
+        display: inline-block;
+        margin: 0.5em 0;
+        
+        &:hover{
+            color: $grayishblue;
+        }
+    }
+    &__socials{
+        margin: 0 auto;
+        display: flex;
+        gap: 1.5em;
+    }
+    &__social{
+        font-size: 1.5em;
+        color: $darkgrayishblue;
+
+        &:hover{
+            color: $strongcyan;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .footer{
+
+        &__content,
+        &__links{
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        &__content{
+            row-gap: 1.5rem;
+        }
+        &__logo{
+            margin: 0 auto;
+        }
+    }
+}
